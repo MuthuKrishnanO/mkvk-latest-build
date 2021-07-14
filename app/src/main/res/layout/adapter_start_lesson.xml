@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:weightSum="3"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/CheckBox"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:buttonTint="#119326"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:id="@+id/play_icon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/play_button"
+                android:visibility="visible"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5">
+            <TextView
+                android:id="@+id/course_lessonTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="lesson lesson lesson lesson lesson lesson lesson lesson lesson lesson"
+                android:textSize="@dimen/primaryText"
+                android:textColor="@color/textview_color"
+                android:layout_toEndOf="@+id/linear"
+                android:layout_marginEnd="10dp" />
+        </LinearLayout>
+        <LinearLayout
+                android:id="@+id/course_lesson_detailsBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end"
+                android:layout_alignParentEnd="true"
+                android:layout_weight="1"
+                android:paddingEnd="10dp"
+                android:layout_toEndOf="@+id/course_lessonTV"
+                android:paddingStart="10dp">
+
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:text="22:11:11"
+                android:visibility="visible"
+                android:textSize="@dimen/primaryText" />
+
+            <ImageView
+                android:id="@+id/summary"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_description"/>
+
+        </LinearLayout>
+
+</TableRow>

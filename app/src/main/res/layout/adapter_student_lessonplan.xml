@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/headlayout"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:weightSum="2">
+
+    <TextView
+        android:id="@+id/adapter_student_classTimetable_subjectTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.65"/>
+
+    <TextView
+        android:id="@+id/adapter_student_classTimetable_timeTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="0.50" />
+
+    <LinearLayout
+        android:id="@+id/adapter_student_classTimetable_syllabusTV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="0.85"
+        android:gravity="right">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/ic_nav_subject"/>
+
+    </LinearLayout>
+
+</LinearLayout>

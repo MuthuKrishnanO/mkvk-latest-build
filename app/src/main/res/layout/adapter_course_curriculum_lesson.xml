@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/videoViewContainer"
+    >
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:id="@+id/adapter_courseDetailsLectures_videoViewContainer"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:cardPreventCornerOverlap="true"-->
+    <!--        >-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_play_icon"
+            android:padding="5dp"
+            />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <TextView
+                    android:id="@+id/headingTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Lesson:"
+                    android:textStyle="bold"
+                    android:textColor="@color/primaryTextColour"
+                    android:textSize="@dimen/primaryText"
+                    android:layout_gravity="center_vertical"
+                    />
+                <TextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text=" "
+                    android:textColor="@color/primaryTextColour"
+                    android:textSize="@dimen/primaryText"
+                    android:layout_gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            >
+            <TextView
+                android:id="@+id/durationTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text=""
+                android:paddingEnd="10dp"
+                android:gravity="end"
+                android:textColor="@color/primaryTextColour"
+                android:textSize="@dimen/primaryText"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--    </androidx.cardview.widget.CardView>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7sp"
+        android:background="@color/seperator"
+        android:alpha="0.2"
+        android:layout_marginStart="10dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/adapter_student_exam_schedule_exam_list"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/CustomCardView"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <LinearLayout
+            android:id="@+id/adapter_student_examList_nameHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:id="@+id/correct_mark"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/subject"
+                    android:src="@drawable/ic_check" />
+            <TextView
+                android:id="@+id/sno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:gravity="right"
+                android:layout_marginStart="10dp"
+                android:textSize="@dimen/primaryText"
+                android:textColor="@color/textHeading"
+                android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:layout_marginLeft="15dp"
+                android:paddingLeft="10dp"
+                android:text="-"
+                android:textColor="@color/textHeading"
+                android:textSize="@dimen/primaryText"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/transparent">
+
+
+            <LinearLayout
+                android:id="@+id/adapter_studentexam_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:id="@+id/multiplechoice_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:paddingLeft="10dp"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/moption_a_image"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:textStyle="bold"
+                            android:text="A"
+                            android:src="@drawable/radiobutton_black"
+                            android:textColor="@color/textHeading"/>
+                        <TextView
+                            android:id="@+id/moption_a_value"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/textHeading"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/moption_b_image"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:text="B"
+                            android:textStyle="bold"
+                            android:src="@drawable/radiobutton_black"
+                            android:textColor="@color/textHeading"/>
+                        <TextView
+                            android:id="@+id/moption_b_value"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/textHeading"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/moption_c_image"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:text="C"
+                            android:textStyle="bold"
+                            android:src="@drawable/radiobutton_black"
+                            android:textColor="@color/textHeading"/>
+                        <TextView
+                            android:id="@+id/moption_c_value"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/textHeading"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/moption_d_image"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:text="D"
+                            android:textStyle="bold"
+                            android:src="@drawable/radiobutton_black"
+                            android:textColor="@color/textHeading"/>
+                        <TextView
+                            android:id="@+id/moption_d_value"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/textHeading"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/moption5_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/moption_e_image"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:text="E"
+                            android:textStyle="bold"
+                            android:src="@drawable/radiobutton_black"
+                            android:textColor="@color/textHeading"/>
+                        <TextView
+                            android:id="@+id/moption_e_value"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/textHeading"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/youranswer"
+                            android:textStyle="bold"
+                            android:textColor="@color/textHeading"/>
+                        <TextView
+                            android:id="@+id/not_answer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Not Answer"
+                            android:visibility="gone"
+                            android:textSize="@dimen/secondaryText"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/textHeading"/>
+                        <TextView
+                            android:id="@+id/option_a"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="A,"
+                            android:visibility="gone"
+                            android:textSize="@dimen/secondaryText"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/textHeading"/>
+                        <TextView
+                            android:id="@+id/option_b"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="B,"
+                            android:visibility="gone"
+                            android:textSize="@dimen/secondaryText"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/textHeading"/>
+                        <TextView
+                            android:id="@+id/option_c"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="C,"
+                            android:visibility="gone"
+                            android:textSize="@dimen/secondaryText"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/textHeading"/>
+                        <TextView
+                            android:id="@+id/option_d"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="D,"
+                            android:visibility="gone"
+                            android:textSize="@dimen/secondaryText"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/textHeading"/>
+                        <TextView
+                            android:id="@+id/option_e"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="E"
+                            android:visibility="gone"
+                            android:textSize="@dimen/secondaryText"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/textHeading"/>
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>

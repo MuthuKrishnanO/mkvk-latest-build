@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.mkvk.smartschool.BaseActivity"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:layout_marginTop="10dp"
+    >
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/lesson_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Lesson"
+            android:textStyle="bold"
+            android:paddingStart="10dp"
+            android:textColor="@color/textHeading"
+            />
+        <TextView
+            android:id="@+id/completedlesson_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:paddingStart="10dp"
+            android:textColor="@color/textHeading"
+            android:text="Completed Lesson"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/quiz_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textHeading"
+            android:textStyle="bold"
+            android:paddingEnd="10dp"
+            android:text="Total Quiz"/>
+        <TextView
+            android:id="@+id/completedquiz_count"
+            android:layout_width="wrap_content"
+            android:textColor="@color/textHeading"
+            android:textStyle="bold"
+            android:paddingEnd="10dp"
+            android:layout_height="wrap_content"
+            android:text="Completed Quiz"/>
+    </LinearLayout>
+
+</LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/course_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="50%"
+                    android:gravity="end"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/textHeading"
+                    android:textSize="@dimen/primaryText" />
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="false"
+                    android:progress="50" />
+
+            </LinearLayout>
+
+            <!-- <androidx.cardview.widget.CardView
+                 android:id="@+id/cardViewBarGraph"
+                 android:layout_width="match_parent"
+                 android:layout_height="200dp"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginRight="20dp"
+                 android:layout_marginTop="15dp"
+                 android:elevation="10dp"
+                 app:cardCornerRadius="10dp">
+
+
+                 &lt;!&ndash;Linear layout to display pie chart &ndash;&gt;
+                 &lt;!&ndash; and details of pie chart&ndash;&gt;
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:orientation="horizontal"
+                     android:weightSum="2">
+
+                     &lt;!&ndash;Pie chart to display the data&ndash;&gt;
+
+                     <com.github.mikephil.charting.charts.HorizontalBarChart
+                         android:id="@+id/chart"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent" />
+
+                 </LinearLayout>
+
+             </androidx.cardview.widget.CardView>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/textHeading"
+                android:text="Quiz Performance"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="10dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/courseperformance_data" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/nodata_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:src="@drawable/no_data" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Data Found !"
+                    android:textSize="@dimen/primaryText"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mkvk.smartschool">
+
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" android:required="false" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.CAMERA" android:required="false"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+
+    <application
+        android:name="com.mkvk.smartschool.utils.MyApp"
+        android:icon="@mipmap/ic_launcher_logo"
+        android:label="@string/app_name"
+        android:launchMode="singleInstance"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name="com.mkvk.smartschool.students.StudentCoursePerformance" />
+        <activity android:name="com.mkvk.smartschool.students.StudentUploadDocument" />
+        <activity
+            android:name="com.mkvk.smartschool.students.StudentCourseDetail"
+            android:configChanges="orientation|keyboardHidden|screenSize|layoutDirection" />
+        <activity android:name="com.mkvk.smartschool.students.StudentOnlineCourse" />
+        <activity
+            android:name="com.mkvk.smartschool.students.StudentStartLessonActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name="com.mkvk.smartschool.students.StudentLiveClasses" />
+        <activity android:name="com.mkvk.smartschool.students.StudentGmeetLiveClasses" />
+        <activity android:name="com.mkvk.smartschool.students.NotificationList" />
+        <activity android:name="com.mkvk.smartschool.students.StudentOnlineExamQuestionsNew" />
+        <activity android:name="com.mkvk.smartschool.students.StudentOnlineExamResult" />
+        <activity android:name="com.mkvk.smartschool.students.StudentOnlineExam" />
+        <activity android:name="com.mkvk.smartschool.AboutSchool" />
+        <activity android:name="com.mkvk.smartschool.students.StudentTimeline" />
+        <activity android:name="com.mkvk.smartschool.students.StudentDocuments" />
+        <activity android:name="com.mkvk.smartschool.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.mkvk.smartschool.Login" />
+        <activity android:name="com.mkvk.smartschool.students.StudentProfile" />
+        <activity android:name="com.mkvk.smartschool.students.StudentProfileNew" />
+        <activity android:name="com.mkvk.smartschool.students.StudentProfileDetailsNew" />
+        <activity android:name="com.mkvk.smartschool.students.StudentUploadHomework" />
+        <activity android:name="com.mkvk.smartschool.ForgotPassword" />
+        <activity android:name="com.mkvk.smartschool.BaseActivity" />
+        <activity android:name="com.mkvk.smartschool.students.StudentFees">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="student_fees" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.mkvk.smartschool.students.StudentNoticeBoard" />
+        <activity android:name="com.mkvk.smartschool.students.StudentExaminationList" />
+        <activity android:name="com.mkvk.smartschool.students.StudentReportCard_ExamListResult" />
+        <activity android:name="com.mkvk.smartschool.students.StudentSubjectList" />
+        <activity android:name="com.mkvk.smartschool.students.StudentTeachersList" />
+        <activity android:name="com.mkvk.smartschool.students.StudentTransportRoutes" />
+        <activity android:name="com.mkvk.smartschool.students.StudentDownloads" />
+        <activity android:name="com.mkvk.smartschool.students.StudentAttendance" />
+        <activity android:name="com.mkvk.smartschool.students.StudentReportCard_ExamList" />
+        <activity android:name="com.mkvk.smartschool.students.StudentExamSchedule_ExamList" />
+        <activity android:name="com.mkvk.smartschool.students.StudentExamSchedule" />
+        <activity android:name="com.mkvk.smartschool.students.StudentHostel" />
+        <activity android:name="com.mkvk.smartschool.students.StudentLibraryBook" />
+        <activity android:name="com.mkvk.smartschool.students.StudentClassTimetable" />
+        <activity android:name="com.mkvk.smartschool.students.StudentSyllabusTimetable" />
+        <activity android:name="com.mkvk.smartschool.students.StudentSyllabusStatus" />
+        <activity android:name="com.mkvk.smartschool.students.StudentHomework" />
+        <activity android:name="com.mkvk.smartschool.students.StudentHomeworkDetails" />
+        <activity android:name="com.mkvk.smartschool.students.StudentLibraryBookIssued" />
+        <activity android:name="com.mkvk.smartschool.students.StudentAppyLeave" />
+        <activity android:name="com.mkvk.smartschool.students.StudentAddLeave" />
+        <activity android:name="com.mkvk.smartschool.students.StudentEditLeave" />
+        <activity android:name="com.mkvk.smartschool.students.StudentSyllabus" />
+        <activity android:name="com.mkvk.smartschool.students.StudentOnlineQuizResult" />
+        <activity android:name="com.mkvk.smartschool.students.StudentSyllabuslesson" />
+        <activity android:name="com.mkvk.smartschool.students.StudentOnlineCourseQuiz" />
+        <activity
+            android:name="com.mkvk.smartschool.TakeUrl"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name="com.mkvk.smartschool.OpenPdf" />
+        <activity
+            android:name="com.mkvk.smartschool.students.StudentDashboard"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name="com.mkvk.smartschool.students.StudentTasks" />
+        <activity android:name="com.mkvk.smartschool.students.Payment" />
+        <activity android:name="com.mkvk.smartschool.students.CoursePayment" />
+        <activity
+            android:name="com.mkvk.smartschool.students.CourseVideoPlay"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="landscape" />
+        <activity android:name="com.mkvk.smartschool.students.LiveClasses" />
+
+        <service android:name="com.mkvk.smartschool.utils.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

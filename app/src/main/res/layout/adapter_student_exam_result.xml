@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/adapter_student_exam_schedule_exam_list"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/CustomCardView"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <LinearLayout
+            android:id="@+id/adapter_student_examList_nameHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/sno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:gravity="right"
+                android:textColor="@color/textHeading"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold" />
+
+            <WebView
+                android:id="@+id/question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="left"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="10dp"
+                android:text="-"
+                android:textColor="@color/textHeading"
+                android:textSize="@dimen/primaryText"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/transparent">
+
+
+            <LinearLayout
+                android:id="@+id/adapter_studentexam_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.3">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/subject"
+                            android:textStyle="bold"
+                            android:textColor="@color/textHeading"/>
+
+                        <TextView
+                            android:id="@+id/subject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/examresult"
+                            android:textSize="@dimen/secondaryText"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/textHeading"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/adapter_studentexam_schedule"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:orientation="vertical"
+                        android:layout_weight="0.7"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/marks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/secondaryText"
+                            android:text=""
+                            android:textStyle="bold"
+                            android:textColor="@color/red"/>
+                        <TextView
+                            android:id="@+id/neg_marks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="@dimen/secondaryText"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/descriptive_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="visible"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/your_answer"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/textHeading"/>
+                        <WebView
+                            android:id="@+id/descriptive_answer"
+                            android:layout_width="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/remark_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/teacher_remark"
+                            android:textStyle="bold"
+                            android:layout_marginTop="5dp"
+                            android:textColor="@color/textHeading"/>
+                        <WebView
+                            android:id="@+id/teacher_remark"
+                            android:layout_width="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_height="wrap_content"/>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/singlechoice_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ImageView
+                        android:id="@+id/optionA_image"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:text="@string/subject"
+                        android:layout_marginTop="10dp"
+                        android:textStyle="bold"
+                        android:src="@drawable/radiobutton_black"
+                        android:textColor="@color/textHeading"/>
+
+
+                    <WebView
+                        android:id="@+id/optionA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ImageView
+                        android:id="@+id/optionB_image"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/subject"
+                        android:textStyle="bold"
+                        android:src="@drawable/radiobutton_black"
+                        android:textColor="@color/textHeading"/>
+
+                    <WebView
+                        android:id="@+id/optionB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ImageView
+                        android:id="@+id/optionC_image"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:text="@string/subject"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/radiobutton_black"
+                        android:textColor="@color/textHeading"/>
+
+                    <WebView
+                        android:id="@+id/optionC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ImageView
+                        android:id="@+id/optionD_image"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:text="@string/subject"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/radiobutton_black"
+                        android:textColor="@color/textHeading"/>
+
+                    <WebView
+                        android:id="@+id/optionD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ImageView
+                        android:id="@+id/optionE_image"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:text="@string/subject"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/radiobutton_black"
+                        android:textColor="@color/textHeading"/>
+
+                    <WebView
+                        android:id="@+id/optionE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/multiplechoice_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/moption_a_image"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:text="@string/subject"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:src="@drawable/radiobutton_black"
+                            android:textColor="@color/textHeading"/>
+                        <WebView
+                            android:id="@+id/moption_a_value"
+                            android:layout_width="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/moption_b_image"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:text="@string/subject"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:src="@drawable/radiobutton_black"
+                            android:textColor="@color/textHeading"/>
+                        <WebView
+                            android:id="@+id/moption_b_value"
+                            android:layout_width="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/moption_c_image"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:text="@string/subject"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:src="@drawable/radiobutton_black"
+                            android:textColor="@color/textHeading"/>
+                        <WebView
+                            android:id="@+id/moption_c_value"
+                            android:layout_width="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/moption_d_image"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:text="@string/subject"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:src="@drawable/radiobutton_black"
+                            android:textColor="@color/textHeading"/>
+                        <WebView
+                            android:id="@+id/moption_d_value"
+                            android:layout_width="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/moption5_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/moption_e_image"
+                            android:layout_width="15dp"
+                            android:layout_height="15dp"
+                            android:text="@string/subject"
+                            android:layout_marginTop="10dp"
+                            android:textStyle="bold"
+                            android:src="@drawable/radiobutton_black"
+                            android:textColor="@color/textHeading"/>
+                        <WebView
+                            android:id="@+id/moption_e_value"
+                            android:layout_width="match_parent"
+                            android:layout_margin="5dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/truefalse_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/true_image"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:text="@string/subject"
+                                        android:layout_marginTop="5dp"
+                                        android:textStyle="bold"
+                                        android:src="@drawable/radiobutton_black"
+                                        android:textColor="@color/textHeading"/>
+                                    <TextView
+                                        android:id="@+id/true_value_option"
+                                        android:layout_width="match_parent"
+                                        android:text="True"
+                                        android:textColor="@color/textHeading"
+                                        android:layout_margin="5dp"
+                                        android:layout_height="wrap_content"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/false_image"
+                                        android:layout_width="15dp"
+                                        android:layout_height="15dp"
+                                        android:text="@string/subject"
+                                        android:layout_marginTop="5dp"
+                                        android:textStyle="bold"
+                                        android:src="@drawable/radiobutton_black"
+                                        android:textColor="@color/textHeading"/>
+
+                                    <TextView
+                                        android:id="@+id/false_value_option"
+                                        android:layout_width="match_parent"
+                                        android:layout_margin="5dp"
+                                        android:text="False"
+                                        android:textColor="@color/textHeading"
+                                        android:layout_height="wrap_content"/>
+
+                                </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>
